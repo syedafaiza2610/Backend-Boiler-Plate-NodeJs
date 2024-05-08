@@ -7,10 +7,8 @@ export const INTERNAL_SERVER_ERROR_MESSAGE = "Internal Server Error";
 export const POST_DATA_MESSAGE = "Data posted Succesfully";
 export const GET_DATA_MESSAGE = "Data get Succesfully";
 
+export default ENV;
 
 
-export default {
-    ENV
-}
 
 

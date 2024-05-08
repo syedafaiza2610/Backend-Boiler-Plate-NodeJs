@@ -2,7 +2,7 @@ import express from "express";
 import helmet from "helmet";
 import routes from "./src/routes/index.js"
 import mongoose from "mongoose";
-import ENV from "./src/constants/index.js";
+import ENV from "../Boiler plate/src/constants/index.js";
 import chalk from "chalk";
 const app = express(); 
 app.use(express.json())  // middleware
