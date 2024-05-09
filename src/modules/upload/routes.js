@@ -1,14 +1,18 @@
 import  { Router } from "express";
 import uploadController from "./controllers/upload.js";
-const router = Router();
 import multer from "multer"
+// import path from "path";
+// const __dirname = path.resolve()
+const router = Router();
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'uploads/')
+      cb(null, 'src/modules/upload/files') // nodejs me dirname directry name
     },
     filename: function (req, file, cb) {
-      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-      cb(null, file.fieldname + '-' + uniqueSuffix)
+      // console.log("file===>" , file)
+      const uniqueID   = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null,`${uniqueID}-${file.originalname}`)
     }
   })
   
