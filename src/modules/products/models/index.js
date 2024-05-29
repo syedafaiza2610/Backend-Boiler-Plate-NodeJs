@@ -19,6 +19,11 @@ const dataSchema = new Schema({
     image: {
         type: mongoose.Schema.Types.String,
         required : true
+    },
+    category:{
+        required:true,
+        type: mongoose.Schema.ObjectId,
+        ref:"Category"
     }
 },{timestamps :{
     createdAt: "created_at",

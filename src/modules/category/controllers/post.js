@@ -10,8 +10,8 @@ const postController = async (req , res) =>{
 
 
     }catch(err){
-        // console.log("error" , err)
-        res.status(500).send({status : 500 , message : "Internal Server Error" , err })
+        console.log("error" , err)
+        res.status(500).send({status : 500 , message : "Internal Server Error"})
     }
 }
 
