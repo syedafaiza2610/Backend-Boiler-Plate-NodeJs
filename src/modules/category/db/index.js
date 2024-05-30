@@ -9,6 +9,7 @@ export{
  getAll, 
  addData,
  deleteById,
- updatedById
+ updatedById,
+
 
 }

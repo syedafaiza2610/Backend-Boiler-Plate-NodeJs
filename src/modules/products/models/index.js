@@ -22,7 +22,7 @@ const dataSchema = new Schema({
     },
     category:{
         required:true,
-        type: mongoose.Schema.ObjectId,
+        type:mongoose.Schema.ObjectId,
         ref:"Category"
     }
 },{timestamps :{
