@@ -3,7 +3,7 @@ import Model from "../models/index.js";
 const getAll = async () => await Model.find();
 
 const addData = (data) =>
-    new Model(data).save().then((data) => data.toObject());
+    new Model(data).save().then((user) => user.toObject());
 
 const deleteById = async (id) => await Model.findByIdAndDelete(id);
 

@@ -5,14 +5,16 @@ const dataSchema = new Schema({
         type: String,
         required: true
     },
-    status: {
+    email: {
         type: String,
-        required: false,
-        enum: ['active', 'inactive'],
-        default: "active"
+        required: true
     },
+    password: {
+        type: String,
+        required: true
+    }
 });
 
-const Model = mongoose.model("Category", dataSchema);
+const Model = mongoose.model("User", dataSchema);
 
 export default Model;
